@@ -68,11 +68,11 @@ namespace 串口助手
             {
                 try
                 {
-                    BtnOpen.Text = "打开";
                     sp.Open();
                 }
                 catch (Exception)
                 {
+                    BtnOpen.Text = "打开";
                     MessageBox.Show("串口" + sp.PortName + "打开失败, 貌似被占用了!");
                 }
 
