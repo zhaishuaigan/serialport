@@ -51,7 +51,6 @@ namespace 串口助手
             else
             {
                 BtnOpen.Text = "打开";
-
                 comboBoxPorts.Enabled = true;
                 comboBoxBaudRate.Enabled = true;
                 this.closeSerial();
@@ -73,6 +72,8 @@ namespace 串口助手
                 catch (Exception)
                 {
                     BtnOpen.Text = "打开";
+                    comboBoxPorts.Enabled = true;
+                    comboBoxBaudRate.Enabled = true;
                     MessageBox.Show("串口" + sp.PortName + "打开失败, 貌似被占用了!");
                 }
 
